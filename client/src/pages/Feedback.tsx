@@ -29,7 +29,7 @@ export default function Feedback() {
 
   const onSubmit = async (data: FeedbackFormType) => {
     try {
-      const responseObj = await fetch('http://localhost:8000/api/post/feedbacks/', {
+      const responseObj = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/post/feedbacks/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
