@@ -71,31 +71,32 @@ Start the backend-server
 
 ## Database setup
 
-Create a MySql database named 'tickets' with these configuration:
-- host: 'localhost',
-- port: '3307',
-- user: 'root',
-- password: 'mysql@wb_2023',
-- database: 'tickets'
+This project uses MySql database named 'tickets' with three tables:
+- unsolved_tickets
+- solved_tickets
+- feedbacks
 
-OR
-
-Navigate to the following directory to define your own configuration.
+Navigate to the following directory to view database configurations.
 
 ```bash
 /server/src/database/dbConfig.js
 ```
 
-Add three tables:
-- unsolved_tickets
-- solved_tickets
-- feedbacks
+
 ## Environment Variables
 
-This project can run without any environment variables. However, if you want the 'automatic-email-sending' feature to work, you will need to add your own email credentials. To do this, navigate to the following directory and uncomment the environment variables and add your own credentials to it.
+```bash
+/client/.env
+``` 
+`VITE_API_BASE_URL:XXXXX`
+
 ```bash
 /server/.env
 ``` 
-`EMAIL`
-
-`PASSWORD`
+`EMAIL:XXXXX`
+`PASSWORD:XXXXX`
+`DB_HOST=XXXXX`
+`DB_PORT=XXXXX`
+`DB_USER=XXXXX`
+`DB_PASSWORD=XXXXX`
+`DB_NAME=XXXXX`
