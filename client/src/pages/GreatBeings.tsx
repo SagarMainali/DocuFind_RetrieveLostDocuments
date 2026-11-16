@@ -10,7 +10,7 @@ export default function SolvedTicketsContainer() {
 
   const isLight = useAppSelector((state) => state.navbar.isLight);
 
-  const path = 'http://localhost:8000/api/get/solved_tickets';
+  const path = `${import.meta.env.VITE_API_BASE_URL}/api/get/solved_tickets`;
   const { tickets, error } = useFetchTickets(path);
 
   return (
