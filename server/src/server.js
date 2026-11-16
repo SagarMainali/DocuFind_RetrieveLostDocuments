@@ -32,6 +32,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Health check endpoint for keeping server awake
+app.get('/health', (req, res) => {
+    res.status(200).send('Server is awake');
+});
+
 // routes
 app.use('/api', userRoutes);
 
