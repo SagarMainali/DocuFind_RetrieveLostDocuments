@@ -4,8 +4,8 @@ const loaderSlice = createSlice({
     name: 'loader',
     initialState: false,
     reducers: {
-        toggleLoader(isLoaderActive, action: PayloadAction<boolean>) {
-            return isLoaderActive = action.payload;
+        toggleLoader(_state, action: PayloadAction<boolean>) {
+            return action.payload;
         }
     }
 })
